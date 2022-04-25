@@ -12,6 +12,7 @@ class ScaffoldLearnView extends StatelessWidget {
         title: const Text('Scaffold samples'),
       ),
       body: const Text('Merhaba'),
+      
       backgroundColor: Colors.purple[200],
       extendBody: true,
       floatingActionButton: FloatingActionButton(onPressed: () {
