@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
           actionsIconTheme:  IconThemeData(color: Colors.pink),
         )
       ),
-      home:  ColorLearn()
+      home: const ButtonLearn()
       
     );
   }
