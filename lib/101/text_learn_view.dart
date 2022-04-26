@@ -11,26 +11,17 @@ class TextLearnView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
+      appBar: AppBar(),
       body: Center(
           child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          
           Text(
             ('Welcome $name ${name.length}'),
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
             textAlign: TextAlign.right,
-            style: const TextStyle(
-              wordSpacing: 2,
-              letterSpacing: 2,
-              fontStyle: FontStyle.italic,
-              color: Colors.lime,
-              fontSize: 16,
-              fontWeight: FontWeight.w600,
-              decoration: TextDecoration.underline,
-            ),
+            style: const WelcomeTextStyle()
           ),
           Text(
             ('Hello $name ${name.length}'),
@@ -74,3 +65,18 @@ class ProjectColors {
 class ProjectKeys {
   final String weolcome = "Merhaba";
 }
+
+class WelcomeTextStyle extends TextStyle {
+ const WelcomeTextStyle() : super(
+    wordSpacing: 2,
+    letterSpacing: 2,
+    fontStyle: FontStyle.italic,
+    color: Colors.lime,
+    fontSize: 16,
+    fontWeight: FontWeight.w600,
+    decoration: TextDecoration.underline,
+  );
+  
+
+}
+//TextLearnView({Key? key, this.userName}) : super(key: key);

@@ -1,6 +1,5 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
+import 'package:flutter_full_learn/101/text_learn_view.dart';
 
 class ScaffoldLearnView extends StatelessWidget {
   const ScaffoldLearnView({Key? key}) : super(key: key);
@@ -12,7 +11,6 @@ class ScaffoldLearnView extends StatelessWidget {
         title: const Text('Scaffold samples'),
       ),
       body: const Text('Merhaba'),
-      
       backgroundColor: Colors.purple[200],
       extendBody: true,
       floatingActionButton: FloatingActionButton(onPressed: () {
@@ -23,11 +21,21 @@ class ScaffoldLearnView extends StatelessWidget {
                 ));
       }),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      drawer: const Drawer(),
+      drawer: Drawer(
+        child: Center(
+          child: TextButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute<void>(
+                    builder: (BuildContext context) =>  TextLearnView(),
+                  ),
+                );
+              },
+              child: Text('text learn viewa git')),
+        ),
+      ),
       bottomNavigationBar: Container(
-        
-        height:100 ,
-         
+        height: 100,
         child: BottomNavigationBar(items: const [
           BottomNavigationBarItem(
               icon: Icon(Icons.account_balance_outlined), label: 'a'),
