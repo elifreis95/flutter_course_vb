@@ -39,7 +39,7 @@ class MyApp extends StatelessWidget {
           actionsIconTheme:  IconThemeData(color: Colors.pink),
         )
       ),
-      home:const PaddingLearn()
+      home:const CardLearn()
       
     );
   }
