@@ -12,6 +12,7 @@ import '101/icon_learn.dart';
 import '101/image_learn.dart';
 import '101/padding_learn.dart';
 import '101/stateless_learn.dart';
+import 'demos/note_demos_view.dart';
 
 
 void main() {
@@ -39,7 +40,7 @@ class MyApp extends StatelessWidget {
           actionsIconTheme:  IconThemeData(color: Colors.pink),
         )
       ),
-      home:const CardLearn()
+      home:const NoteDemo()
       
     );
   }

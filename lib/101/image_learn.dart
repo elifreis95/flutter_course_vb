@@ -1,4 +1,4 @@
-import 'dart:ui';
+
 
 import 'package:flutter/material.dart';
 
@@ -12,13 +12,11 @@ class ImageLearn extends StatelessWidget {
       body: Column(
         children: [
           SizedBox(
-            height: 400,
-            width: 400,
-            child: Image.asset(
-              ImageItems().roundFloral,
-              fit: BoxFit.cover,
-            ),
-          ),
+              height: 400,
+              width: 400,
+              child: PngImage(
+                name: ImageItems().appleBook,
+              )),
         ],
       ),
     );
@@ -26,10 +24,12 @@ class ImageLearn extends StatelessWidget {
 }
 
 class ImageItems {
-  final String roundFlowerFrame =
-      "assets/21-215322_floral-png-floral-png-round-flower-frame-png.png";
+  final String roundFlowerFrame = "flower_frame";
   final String roundFloral =
-      "assets/png/69-694072_roses-rose-pinkroses-pink-flowers-flower-floral-circle.png.";
+      "69-694072_roses-rose-pinkroses-pink-flowers-flower-floral-circle.png.";
+  final String roundFloralWithoutPath =
+      "69-694072_roses-rose-pinkroses-pink-flowers-flower-floral-circle.png.";
+  final String appleBook = "apple_book";
 }
 
 class PngImage extends StatelessWidget {
@@ -40,7 +40,7 @@ class PngImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Image.asset(
       'assets/png/$name.png',
-      fit: BoxFit.cover,
+      fit: BoxFit.fill,
     );
   }
 }
