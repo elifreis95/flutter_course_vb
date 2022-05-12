@@ -1,47 +1,93 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_full_learn/101/icon_learn.dart';
 import 'package:flutter_full_learn/101/image_learn.dart';
 
 class NoteDemo extends StatelessWidget {
-  const NoteDemo({Key? key}) : super(key: key);
+  NoteDemo({Key? key}) : super(key: key);
   final _title = 'Create Your First Note';
   final _desciption = 'Add note about anything and share it with the world';
   final _createNote = 'Create a Note';
   final _importNotes = 'Import Notes';
+  final IconSizes iconSizes = IconSizes();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+            onPressed: () {},
+            icon: Icon(
+              Icons.chevron_left,
+              color: Colors.blueAccent,
+              size: iconSizes.iconSmall,
+            )),
         systemOverlayStyle: SystemUiOverlayStyle.dark,
       ),
       backgroundColor: Colors.blueGrey[50],
-      body: Padding(
-        padding: PaddingItems.horizontalPadding,
-        child: Column(
-          children: [
-            Padding(
-              padding: PaddingItems.verticalPadding,
-              child: SizedBox(
-                  height: 200,
-                  width: 300,
-                  child: PngImage(name: ImageItems().appleBook)),
-            ),
-            _TitleWidget(title: _title),
-            Padding(
-              padding: PaddingItems.verticalPadding,
-              child: _SubTitleWidget(title: _desciption * 3),
-            ),
-            const Spacer(),
-            Padding(
-              padding: PaddingItems.verticalPadding,
-              child: _createButton(context),
-            ),
-            TextButton(onPressed: () {}, child: Text(_importNotes)),
-            SizedBox(
-              height: ButtonHights.textButtonHeight,
-            )
-          ],
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: PaddingItems.horizontalPadding,
+          child: Column(
+            children: [
+              Padding(
+                padding: PaddingItems.verticalPadding,
+                child: SizedBox(
+                    height: 200,
+                    width: 300,
+                    child: PngImage(name: ImageItems().appleBook)),
+              ),
+              _TitleWidget(title: _title),
+              SizedBox(
+                height: 150,
+                child: ListView(
+                  shrinkWrap: true,
+                  children: [
+                    Padding(
+                      padding: PaddingItems.verticalPadding,
+                      child: _SubTitleWidget(title: _desciption * 3),
+                    ),
+                    Padding(
+                      padding: PaddingItems.verticalPadding,
+                      child: _SubTitleWidget(title: _desciption * 3),
+                    ),
+                    Padding(
+                      padding: PaddingItems.verticalPadding,
+                      child: _SubTitleWidget(title: _desciption * 3),
+                    ),
+                    Padding(
+                      padding: PaddingItems.verticalPadding,
+                      child: _SubTitleWidget(title: _desciption * 3),
+                    ),
+                    Padding(
+                      padding: PaddingItems.verticalPadding,
+                      child: _SubTitleWidget(title: _desciption * 3),
+                    ),
+                    Padding(
+                      padding: PaddingItems.verticalPadding,
+                      child: _SubTitleWidget(title: _desciption * 3),
+                    ),
+                    Padding(
+                      padding: PaddingItems.verticalPadding,
+                      child: _SubTitleWidget(title: _desciption * 3),
+                    ),
+                    Padding(
+                      padding: PaddingItems.verticalPadding,
+                      child: _SubTitleWidget(title: _desciption * 3),
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: PaddingItems.verticalPadding,
+                child: _createButton(context),
+              ),
+              TextButton(onPressed: () {}, child: Text(_importNotes)),
+              SizedBox(
+                height: ButtonHights.textButtonHeight,
+              )
+            ],
+          ),
         ),
       ),
     );
@@ -112,4 +158,8 @@ class PaddingItems {
 class ButtonHights {
   static const double buttonNormalHeight = 50;
   static const double textButtonHeight = 30;
+}
+
+class IconSizes {
+  final double iconSmall = 40;
 }

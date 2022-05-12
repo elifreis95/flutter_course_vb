@@ -39,7 +39,7 @@ class TextLearnView extends StatelessWidget {
                   .headline5
                   ?.copyWith(color: ProjectColors.welcomeColor)),
           Text(userName ?? ''),
-          Text(keys.weolcome),
+          Text(keys.wellcome),
         ],
       )),
     );
@@ -63,7 +63,7 @@ class ProjectColors {
 }
 
 class ProjectKeys {
-  final String weolcome = "Merhaba";
+  final String wellcome = "Merhaba";
 }
 
 class WelcomeTextStyle extends TextStyle {
