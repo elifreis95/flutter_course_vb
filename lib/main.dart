@@ -60,7 +60,7 @@ class MyApp extends StatelessWidget {
             color: Colors.pink),
         )
       ),
-      home: ListTileLearn()
+      home: CustomWidgetLearn()
       
     );
   }
