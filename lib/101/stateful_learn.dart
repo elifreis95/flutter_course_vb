@@ -38,7 +38,7 @@ class _StatefulLearnState extends State<StatefulLearn> {
               child: Text(_countValue.toString(),
                   style: Theme.of(context).textTheme.headline4)),
           Placeholder(),
-          CounterHelloButton()
+          CounterHelloButton(),
         ],
       ),
     );
