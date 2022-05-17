@@ -61,7 +61,7 @@ class MyApp extends StatelessWidget {
             color: Colors.pink),
         )
       ),
-      home: StatefulLifeCycleLearn(message:'Base2')
+      home: StatefulLearn()
       
     );
   }
