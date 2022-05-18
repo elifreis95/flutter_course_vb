@@ -20,6 +20,7 @@ import '101/stack_learn.dart';
 import '101/stateful_learn.dart';
 import '101/stateful_life_cycle_learn.dart';
 import '101/stateless_learn.dart';
+import '101/text_field_learn.dart';
 import 'demos/note_demos_view.dart';
 import 'demos/stack_demo_view.dart';
 
@@ -53,6 +54,26 @@ class MyApp extends StatelessWidget {
         ),
         
         errorColor:  ColorsItems.deluge,
+        textSelectionTheme: TextSelectionThemeData(
+          selectionColor: Colors.red, 
+          cursorColor: Colors.green,
+          selectionHandleColor: Colors.black
+
+        ),
+        inputDecorationTheme: InputDecorationTheme(
+          filled: true,
+          fillColor: Colors.white,
+          iconColor: Colors.red,
+          labelStyle: TextStyle(color: Colors.purple),
+          border: OutlineInputBorder(),
+          floatingLabelStyle: TextStyle(
+            color: Colors.red,
+            fontSize: 20,
+            fontWeight: FontWeight.w600
+          ),
+        
+        ),
+        textTheme: TextTheme(subtitle1: TextStyle(color: Colors.green)),
         appBarTheme: const  AppBarTheme(
           centerTitle: true,
           backgroundColor: Colors.transparent,
@@ -61,7 +82,7 @@ class MyApp extends StatelessWidget {
             color: Colors.pink),
         )
       ),
-      home: StatefulLearn()
+      home: TextFieldLearn()
       
     );
   }
