@@ -21,6 +21,7 @@ import '101/stateful_learn.dart';
 import '101/stateful_life_cycle_learn.dart';
 import '101/stateless_learn.dart';
 import '101/text_field_learn.dart';
+import 'demos/color_demos_view.dart';
 import 'demos/note_demos_view.dart';
 import 'demos/stack_demo_view.dart';
 
@@ -82,7 +83,7 @@ class MyApp extends StatelessWidget {
             color: Colors.pink),
         )
       ),
-      home: TextFieldLearn()
+      home: ColorDemos()
       
     );
   }
