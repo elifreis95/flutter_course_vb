@@ -14,6 +14,8 @@ import '101/icon_learn.dart';
 import '101/image_learn.dart';
 import '101/indicator_learn.dart';
 import '101/list_tile_learn.dart';
+import '101/list_view_builder.dart';
+import '101/list_view_learn.dart';
 import '101/padding_learn.dart';
 import '101/page_view_learn.dart';
 import '101/stack_learn.dart';
@@ -75,7 +77,9 @@ class MyApp extends StatelessWidget {
           ),
         
         ),
-        textTheme: TextTheme(subtitle1: TextStyle(color: Colors.green)),
+        textTheme: TextTheme(subtitle1: TextStyle(color: Colors.green),
+        ),
+        
         appBarTheme: const  AppBarTheme(
           centerTitle: true,
           backgroundColor: Colors.transparent,
@@ -84,7 +88,7 @@ class MyApp extends StatelessWidget {
             color: Colors.white),
         )
       ),
-      home: ColorLifeCycleView()
+      home: ListViewLearn()
       
     );
   }
