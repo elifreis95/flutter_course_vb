@@ -22,6 +22,7 @@ import '101/stateful_life_cycle_learn.dart';
 import '101/stateless_learn.dart';
 import '101/text_field_learn.dart';
 import 'demos/color_demos_view.dart';
+import 'demos/color_life_cycle_view.dart';
 import 'demos/note_demos_view.dart';
 import 'demos/stack_demo_view.dart';
 
@@ -80,10 +81,10 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.transparent,
           elevation: 0,
           actionsIconTheme:  IconThemeData(
-            color: Colors.pink),
+            color: Colors.white),
         )
       ),
-      home: ColorDemos()
+      home: ColorLifeCycleView()
       
     );
   }
