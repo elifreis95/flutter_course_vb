@@ -17,6 +17,7 @@ import '101/indicator_learn.dart';
 import '101/list_tile_learn.dart';
 import '101/list_view_builder.dart';
 import '101/list_view_learn.dart';
+import '101/navigation_learn.dart';
 import '101/padding_learn.dart';
 import '101/page_view_learn.dart';
 import '101/stack_learn.dart';
@@ -91,7 +92,7 @@ class MyApp extends StatelessWidget {
             color: Colors.white),
         )
       ),
-      home: MyCollectionsDemos()
+      home: NavigationLearn()
       
     );
   }
