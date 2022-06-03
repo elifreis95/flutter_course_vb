@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_full_learn/101/list_tile_learn.dart';
 import 'package:flutter_full_learn/101/text_learn_view.dart';
 
 class ScaffoldLearnView extends StatelessWidget {
@@ -8,9 +9,12 @@ class ScaffoldLearnView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Scaffold samples'),
+        title: const Text('Scaffold Samples',
+        style: TextStyle(color: Colors.tealAccent)
+        ),
       ),
-      body: const Text('Merhaba'),
+      body: const Text('Hello',
+      style: WelcomeTextStyle()),
       backgroundColor: Colors.purple[200],
       extendBody: true,
       floatingActionButton: FloatingActionButton(onPressed: () {
@@ -27,11 +31,15 @@ class ScaffoldLearnView extends StatelessWidget {
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute<void>(
-                    builder: (BuildContext context) =>  TextLearnView(),
+                    builder: (BuildContext context) =>  ListTileLearn(),
                   ),
                 );
               },
-              child: Text('text learn viewa git')),
+              child: Text(ScaffoldText.title,
+              style: Theme.of(context).textTheme.subtitle2?.copyWith(color:Colors.purple[200])
+              )
+              ),
+              
         ),
       ),
       bottomNavigationBar: Container(
@@ -45,4 +53,7 @@ class ScaffoldLearnView extends StatelessWidget {
       ),
     );
   }
+}
+class ScaffoldText {
+  static String title = 'Go To List Tile View';  
 }

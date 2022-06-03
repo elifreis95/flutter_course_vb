@@ -10,7 +10,7 @@ class IconLearnView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Hello'),
-        centerTitle: true,
+        
       ),
       body: Column(
         children: [

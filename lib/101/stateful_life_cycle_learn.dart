@@ -60,7 +60,7 @@ class _StatefulLifeCycleLearnState extends State<StatefulLifeCycleLearn> {
             ? TextButton(
                 onPressed: () {
                   setState(() {
-                    _message = 'a';
+                    _message = 'is odd';
                   });
                 },
                 child: Text(_message))

@@ -71,7 +71,7 @@ class WelcomeTextStyle extends TextStyle {
     wordSpacing: 2,
     letterSpacing: 2,
     fontStyle: FontStyle.italic,
-    color: Colors.lime,
+    color: Colors.tealAccent,
     fontSize: 16,
     fontWeight: FontWeight.w600,
     decoration: TextDecoration.underline,

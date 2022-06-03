@@ -25,6 +25,7 @@ class PaddingLearn extends StatelessWidget {
                 height: 100),
             ),
             Padding(
+              
               padding: ProjectPadding.pagePaddingRightOnly +
                   ProjectPadding.pagePaddingVertical,
               child: const Text('Elif'),

@@ -20,12 +20,18 @@ class _NavigateDetailLearnState extends State<NavigateDetailLearn> {
     return Scaffold(
       appBar: AppBar(),
       body: Center(
-        child: ElevatedButton.icon(
-            onPressed: () {
-              Navigator.of(context).pop(!widget.isOkey);
-            },
-            icon: Icon(Icons.check,color: widget.isOkey? Colors.red:Colors.green,),
-            label:widget.isOkey? Text('Reject'): Text('Confirm')),
+        child: ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            primary: Colors.cyan,
+          ),
+          onPressed: (){},
+          child: ElevatedButton.icon(
+              onPressed: () {
+                Navigator.of(context).pop(!widget.isOkey);
+              },
+              icon: Icon(Icons.check,color: widget.isOkey? Colors.red:Colors.green,),
+              label:widget.isOkey? Text('Reject'): Text('Confirm')),
+        ),
       ),
     );
   }

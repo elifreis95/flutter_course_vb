@@ -25,6 +25,7 @@ import '101/stateful_learn.dart';
 import '101/stateful_life_cycle_learn.dart';
 import '101/stateless_learn.dart';
 import '101/text_field_learn.dart';
+import '202/tab_learn.dart';
 import 'demos/color_demos_view.dart';
 import 'demos/color_life_cycle_view.dart';
 import 'demos/my_collections_demos.dart';
@@ -49,6 +50,14 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       
       theme: ThemeData.dark().copyWith(
+        tabBarTheme: TabBarTheme(
+          labelColor: Colors.black,
+              unselectedLabelColor: Colors.white,
+              indicatorSize: TabBarIndicatorSize.label,
+        ),
+        bottomAppBarTheme: BottomAppBarTheme(
+          shape: CircularNotchedRectangle()
+        ),
         progressIndicatorTheme: ProgressIndicatorThemeData(
           
           color: Colors.white,
@@ -92,7 +101,7 @@ class MyApp extends StatelessWidget {
             color: Colors.white),
         )
       ),
-      home: NavigationLearn()
+      home: TabLearn()
       
     );
   }
