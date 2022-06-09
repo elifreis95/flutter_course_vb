@@ -48,6 +48,7 @@ class MyApp extends StatelessWidget {
               systemOverlayStyle: SystemUiOverlayStyle.light,
               backgroundColor: Colors.transparent,
               elevation: 0,
+              
               actionsIconTheme: IconThemeData(color: Colors.white),
             )),
         home: ModelLearnView());
